@@ -166,4 +166,43 @@ function main() {
         bst.insert(66);
         bst.insert(90);
         bst.insert(22);
+        // (dsfPreOrder(bst));
+        // InOrder(bst);
+        PostOrder(bst);
 }
+main();
+
+function PreOrder(bst) {
+    console.log(bst.key);
+    if (bst.left) {
+        PreOrder(bst.left);
+        
+    }
+    if (bst.right) {
+        PreOrder(bst.right);
+    }
+
+}
+
+function InOrder(bst) {
+    if(bst.left) {
+        InOrder(bst.left);
+    }
+    console.log(bst.key);
+    if(bst.right) {
+        InOrder(bst.right);
+    }
+}
+
+
+function PostOrder(bst) {
+    if (bst.left) {
+        PostOrder(bst.left);
+    }
+    
+    if (bst.right) {
+        PostOrder(bst.right);
+    }
+    console.log(bst.key);
+}
+
