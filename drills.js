@@ -168,7 +168,7 @@ function main() {
         bst.insert(22);
         // (dsfPreOrder(bst));
         // InOrder(bst);
-        PostOrder(bst);
+        // PostOrder(bst);
 }
 main();
 
@@ -206,3 +206,29 @@ function PostOrder(bst) {
     console.log(bst.key);
 }
 
+const sharePrice = [128, 97, 121, 123, 98, 97, 105]
+
+function maxProfit(array) {
+    let minVal = array[0];
+    let index = 0; 
+    for (let i = 0; i < array.length; i++) {
+        if(array[i]< minVal) {
+            minVal = array[i];
+            index = i; 
+        }
+    }
+    let maxVal = array[index];
+    for (let i = index; i < array.length; i++) {
+        if(maxVal < array[i]) {
+            maxVal = array[i];
+        }
+    }
+    return maxVal - minVal;
+}
+
+// console.log(maxProfit(sharePrice))
+
+
+function eggDrop() {
+    n (n+1) / 2  >=  100
+}

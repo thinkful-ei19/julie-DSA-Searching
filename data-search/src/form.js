@@ -19,8 +19,8 @@ export default class Form extends React.Component {
             for(let i=0; i<string.length; i++){
                 if(arr[i] === value){
                     newThis.setState({
-                    input: value,
-                    count: i
+                        input: value,
+                        count: i
                     })
                 }
             }
@@ -31,7 +31,7 @@ export default class Form extends React.Component {
             
         
             if (start > end) {
-                bindThis.setState({
+                newThis.setState({
                     input: 'Not found',
                     count: 'none'
                 })
@@ -43,7 +43,7 @@ export default class Form extends React.Component {
         
             console.log(start, end);
             if (item === value) {
-                bindThis.setState({
+                newThis.setState({
                     input: value,
                     count: count
                 })
